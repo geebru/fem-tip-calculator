@@ -1,0 +1,82 @@
+:root {
+  --color-primary-java: hsl(172, 67%, 45%);
+
+  --color-neutral-sherpa: hsl(183, 100%, 15%);
+  --color-neutral-cutty: hsl(186, 14%, 43%);
+  --color-neutral-granny: hsl(186, 14%, 56%);
+  --color-neutral-ice: hsl(185, 41%, 84%);
+  --color-neutral-catskill: hsl(180, 37%, 97%);
+
+  --color-white: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:is(html, body) {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--color-neutral-ice);
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+}
+
+label {
+  display: block;
+}
+
+input[type="number"] {
+  text-align: right;
+}
+
+
+h1 {
+  margin-block: 0 5rem;
+  line-height: 1;
+}
+
+h1 svg {
+  display: block;
+  margin-inline: auto;
+}
+
+
+.splitter {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0 1rem 2rem hsla(183, 100%, 15%, .2);
+}
+
+@media (min-width: 35rem) {
+  .splitter {
+    grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+.splitter__totals {
+  padding: 2rem;
+  background-color: var(--color-neutral-sherpa);
+  border-radius: 15px;
+  color: var(--color-white);
+}
+
+.splitter__totals > div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
